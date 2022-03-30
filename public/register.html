@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/40a7e85c50.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="images/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>로또</title>
+</head>
+<body>
+    <h1 class="d-none">로또 한울</h1>
+    <div class="header-top">
+        <ul class="top-wrap">
+            <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+        </ul>
+    </div>
+    <header>
+        <div class="logo2">
+            <a href="/">
+                <img src="images/logo2.png" alt="로고이미지"></a>
+        </div>
+    </header>
+    <section>
+        <h2 class="section-title">회원가입</h2>
+        <article>
+            <h3 class="d-none">회원가입폼</h3>
+            <form action="/add_user" id="registerForm" method="post" autocomplete="#">
+                <ul>
+                    <li>
+                        <label for="userId">아이디</label>
+                        <input type="text" id="userId" maxlength="16" required>
+                    </li>
+                    <li>
+                        <label for="userPW">비밀번호</label>
+                        <input type="password" id="userPW" maxlength="24" required>
+                    </li>
+                    <li>
+                        <label for="userSecurity">인증번호</label>
+                        <input type="text" id="userSecurity" maxlength="8" required>
+                        <a href="#" onclick="checkSeurity()">인증요청</a>
+                    </li>
+                    <li>
+                        <label for="userPrivacy"></label>
+                        <input type="checkbox" id="userPrivacy">
+                        개인정보수집 및 이용에 동의합니다.
+                        <a href="#" class="wran">[전체보기]</a>
+                    </li>
+                    <li>
+                        <input type="submit" value="회원가입">
+                    </li>
+                </ul>
+            </form>
+        </article>
+    </section>
+    
+    <footer>
+        <hr>
+        
+            <div class="a-wrap">
+                <ul class="links">
+                    <li><a href="/join">회원가입</a></li>
+                    <li><a href="/login">로그인</a></li>
+                </ul>
+                <a href="/cs">고객센터</a>
+            </div>
+       
+    </footer>
+
+    <script src="lotto.js"></script>
+</body>
+</html>

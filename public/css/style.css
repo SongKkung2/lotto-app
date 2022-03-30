@@ -1,0 +1,148 @@
+@charset "utf-8";
+:root{
+    --base-text-dark: #333;
+    --base-text-white: #fff;
+    --base-bg-white: white;
+    --base-bg-dark: #efefef;
+    --base-font-size: 16px;
+    --bar-bg: #F18F01;
+}
+
+body{
+    font: 16px/1.5 "Noto Sans KR";
+    background-color: green;
+    color: var(--base-text-color);
+}
+.d-none{
+    display: none;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+@media screen and (max-width:480px){
+    html{
+        height: 100vh;
+    }
+    body{
+        background: linear-gradient(to bottom, #fff,#eef5ff);
+    }
+    .header-top{
+        background: #00a0d2;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
+    .top-wrap{
+        height: 40px;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        color: white;
+        align-items: center;
+    }
+    .logo{
+        width: 355px;
+        height: 262px;
+        margin: 0 auto;
+        margin-top: 82px;
+    }
+    .logo2{
+        text-align: center;
+        margin-top: 32px;
+    }
+    .btns{
+        display: flex;
+        flex-direction: column;
+        width: 200px;
+        margin: 0 auto;
+    }
+    button{
+        width: 200px;
+        height: 60px;
+        color: white;
+        font-size: 24px;
+        border: 0;
+        border-radius: 30px;
+        text-indent: 23px;
+    }
+    #make_game5{
+        
+        background: #90c320 url(../images/x5.png) no-repeat 5% center;
+        margin-bottom: 66px;
+    }
+    #make_game1{
+        
+        background: #00a0d2 url(../images/x1.png) no-repeat 5% center;
+    }
+    footer{
+        width: 100%;
+        position: fixed;
+        bottom: 3%;
+        left: 0;
+        
+    }
+    hr{
+        border: 1px solid #004ea1;
+        margin-top: 176px;
+    }
+    .a-wrap{
+        display: flex;
+        font-size: 14px;
+        color: #004ea1;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .a-wrap > a{
+        margin-right: 10px;
+
+    }
+    .links{
+        display: flex;
+        width: 105px;
+        justify-content: space-between;
+        font-size: 14px;
+        color: #004ea1;
+        margin-right: 10px;   
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    /* mobile section */
+    .section-title{
+        text-align: center;
+        font-size: 1.25rem;
+        margin: 0 0 1rem 0;
+    }
+   
+    /* mobile section : customer page */
+    .icon-list {
+        display: grid;
+        margin: 0 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+    .icon-list li {
+        box-shadow: 0 0 8px 0px rgba(0, 0, 0, .2);
+        min-height: 100px;
+        border-radius: 10px;
+        
+    }
+    .icon-list li:hover {
+        background: #90c320;
+        color: var(--base-text-white);
+        /* transform: scale(1.2); */
+        /* transition: all ease-in-out .2s; */
+    }
+    .icon-list li a{
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    }
+   
+}
