@@ -27,10 +27,10 @@
                 </ul>
                 <hr id="burger-hr">
                 <ul class="icon-links">
-                    <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-lock-open"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-user-plus"></i></a></li>
-                    <li><a href="#"><i class="fa-solid fa-headset"></i></a></li>
+                    <li><a href="/"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="/login"><i class="fa-solid fa-lock-open"></i></a></li>
+                    <li><a href="/join"><i class="fa-solid fa-user-plus"></i></a></li>
+                    <li><a href="/cs"><i class="fa-solid fa-headset"></i></a></li>
                 </ul>
             </nav>
         </div>
@@ -53,27 +53,32 @@
     <section>
         <h2 class="section-title">회원가입</h2>
         <article>
-            <h3 class="d-none">회원가입폼</h3>
-            <form action="/add_user" id="registerForm" method="post" autocomplete="#">
+            <h3 class="d-none">회원가입 폼</h3>
+            <form action="" id="registerForm" method="post" autocomplete="off">
                 <ul>
                     <li>
                         <label for="userId">아이디</label>
-                        <input type="text" id="userId" maxlength="16" required>
+                        <input type="text" id="userId" maxlength="16" requried>
                     </li>
                     <li>
-                        <label for="userPW">비밀번호</label>
-                        <input type="password" id="userPW" maxlength="24" required>
+                        <label for="userPw">비밀번호</label>
+                        <input type="password" id="userPw" maxlength="24" requried>
                     </li>
                     <li>
                         <label for="userSecurity">인증번호</label>
-                        <input type="text" id="userSecurity" maxlength="8" required>
-                        <a href="#" onclick="checkSeurity()">인증요청</a>
+                        <input type="text" id="userSecurity" maxlength="6" requried>
+                        <a href="#" id="clickSecurity" onclick="checkSecurity()">인증요청</a>
+                        <script>
+                            function checkSecurity(){
+                                alert("인증 서버 점검중!\n잠시후, 다시 시도해주세요.")
+                            }
+                        </script>
                     </li>
                     <li>
-                        <label for="userPrivacy"></label>
-                        <input type="checkbox" id="userPrivacy">
+                        <label for="userPrivacy">인증번호</label>
+                        <input type="checkbox" id="userPrivacy" checked>
                         개인정보수집 및 이용에 동의합니다.
-                        <a href="#" class="wran">[전체보기]</a>
+                        <a href="#" class="warn" onclick="alert('서버 점검 시간입니다. 잠시후 다시 시도하세요!')">[전체보기]</a>
                     </li>
                     <li>
                         <input type="submit" value="회원가입">
