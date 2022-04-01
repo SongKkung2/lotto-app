@@ -26,6 +26,12 @@ a , a:hover{
 .text-center {
     text-align: center;
 }
+.justify-center{
+    justify-content: center;
+}
+.column-direction{
+    flex-direction: column;
+}
 section{
     margin: 0 1rem;
 }
@@ -93,18 +99,20 @@ section{
     footer{
         width: 100%;
         position: fixed;
-        bottom: 3%;
+        bottom: 0%;
         left: 0;
-        
+        padding-bottom: 5%;
+        background: var(--main-color1);
+        color: white;
     }
     hr{
-        border: 1px solid #004ea1;
-        margin-top: 176px;
+        border: none;
+        margin-top: 0;
     }
     .a-wrap{
         display: flex;
         font-size: 14px;
-        color: #004ea1;
+        color: white;
         flex-direction: column;
         align-items: flex-end;
     }
@@ -117,7 +125,7 @@ section{
         width: 105px;
         justify-content: space-between;
         font-size: 14px;
-        color: #004ea1;
+        color: white;
         margin-right: 10px;   
         margin-bottom: 20px;
         margin-top: 10px;
@@ -244,6 +252,7 @@ section{
         color: white;
         width: 180px;
         border-radius: 50px;
+        text-indent: 5px;
         position: relative;
         display: block;
         margin: 2rem auto;
@@ -279,6 +288,7 @@ section{
     /* login */
     #loginForm li, #registerForm li{
         position: relative;
+        display: flex;
         margin: 0 0 1.5rem 0;
     }
     #loginForm li input, #registerForm li input{
@@ -373,4 +383,13 @@ section{
         align-items: center;
     }
    
+}
+@media screen and (max-width: 320px){
+    #lotto_num dd{
+        letter-spacing: -1px;
+    }
+    #registerForm li #clickSecurity{
+        width: 34%;
+        text-indent: 21%;
+    }
 }
