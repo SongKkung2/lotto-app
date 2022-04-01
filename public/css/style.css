@@ -29,6 +29,9 @@ a , a:hover{
 section{
     margin: 0 1rem;
 }
+.my-1 {
+    margin: 1rem 0;
+}
 
 @media screen and (max-width:480px){
     html{
@@ -78,12 +81,12 @@ section{
         border-radius: 30px;
         text-indent: 23px;
     }
-    #make_game5{
+    #make_num5{
         
         background: #90c320 url(../images/x5.png) no-repeat 5% center;
         margin-bottom: 66px;
     }
-    #make_game1{
+    #make_num1{
         
         background: #00a0d2 url(../images/x1.png) no-repeat 5% center;
     }
@@ -182,7 +185,70 @@ section{
         justify-content: center;
         column-gap: 1rem;
     }
-    
+    /* result1 */
+    #lotto_num .dl-wrap{
+        display: table;
+        width: 90%;
+        margin: 0 auto;
+    }
+    #lotto_num dl{
+        
+        display: table-row;
+        
+    }
+    #lotto_num dt, #lotto_num dd{
+        display: table-cell;
+    }
+    #lotto_num dt{
+        background: var(--main-color1);
+        color: var(--base-text-white);
+        padding: 1rem 2rem;
+    }
+    #lotto_num dd{
+        border-top: 1px solid var(--main-color3);
+        border-bottom: 1px solid var(--main-color3);
+        background-color: var(--base-bg-white);
+        color: var(--main-color3);
+        letter-spacing: 5px;
+    }
+    #blind {
+        height: 50px;
+        background: var(--main-color1);
+        font-size: var(--base-text-white);
+        width: 180px;
+        border-radius: 50px;
+        position: relative;
+        display: block;
+        margin: 2rem auto;
+        transition: all ease-in-out .3s;
+    }
+    #blind.lock {
+        
+        background: var(--main-color0, #262656);
+    }
+    #blind.unlock{
+        
+        background: var(var(--main-color2));
+    }
+    #blind::before{
+        content: '';
+        display: block;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background: var(--base-bg-white);
+        position: absolute;
+        top: 10px;
+        transition: all ease-in-out .3s;
+        
+        z-index: 10;
+    }
+    #blind.lock::before{
+        left: 10PX;
+    }
+    #blind.unlock::before{
+        left: calc(90% - 25PX);
+    }
     /* login */
     #loginForm li, #registerForm li{
         position: relative;

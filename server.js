@@ -20,6 +20,12 @@ app.get('/cs', (req, res) => {
 app.get('/add_user', (req, res) => {
   res.send("정상적으로 회원가입 되었습니다.")
 })
+app.get('/result+1', (req, res) => {
+  res.sendFile(__dirname+'/public/result1.html')
+})
+app.get('/result+5', (req, res) => {
+  res.sendFile(__dirname+'/public/result5.html')
+})
 
 
   
